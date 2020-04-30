@@ -1,21 +1,34 @@
-console.log("Hello, World!");
-console.log(123);
-console.log(true);
-var greeting = 'Hello!';
-console.log(greeting);
-console.log([1,2,3,4]);
-console.log({a:1, b:2});
-console.table({a:1, b:2});
-console.error('This is some error!');
-console.warn('This is a warning!');
-console.time('Hello');
-    console.log('Hello, World!');
-    console.log('Hello, World!');
-    console.log('Hello, World!');
-    console.log('Hello, World!');
-    console.log('Hello, World!');
-    console.log("Hello, World!");
-    console.log('Hello, World!');
-    console.log("Hello, World!");
-    console.log('Hello, World!');
-console.timeEnd('Hello');
+const name = 'John';
+const age = 31;
+const job = 'Web Developer';
+const city = 'Miami';
+let html;
+
+// Without template strings (es5)
+html = '<ul><li>Name: ' + name + '</li><li>Age: ' + age + '</li><li>Job: ' + job + '</li><li>City: ' + city + '</li></ul>';
+
+html = '<ul>' +
+       '<li>Name: ' + name + '</li>' + 
+       '<li>Age: ' + age + '</li>' + 
+       '<li>Job: ' + job + '</li>' + 
+       '<li>City: ' + city + '</li>' + 
+       '</ul>';
+      
+function hello() {
+    return 'hello';
+}
+
+// With template strings (es6)
+html = `<ul>
+          <li>Name: ${name}</li>
+          <li>Age: ${age}</li>
+          <li>Job: ${job}</li>
+          <li>City: ${city}</li>
+          <li>${2 + 2}</li>
+          <li>${hello()}</li>
+          <li>${age > 30 ? 'Over 30' : 'Under 30'}</li>
+        </ul>`;
+
+document.body.innerHTML = html;
+
+
