@@ -1,34 +1,38 @@
-const name = 'John';
-const age = 31;
-const job = 'Web Developer';
-const city = 'Miami';
-let html;
-
-// Without template strings (es5)
-html = '<ul><li>Name: ' + name + '</li><li>Age: ' + age + '</li><li>Job: ' + job + '</li><li>City: ' + city + '</li></ul>';
-
-html = '<ul>' +
-       '<li>Name: ' + name + '</li>' + 
-       '<li>Age: ' + age + '</li>' + 
-       '<li>Job: ' + job + '</li>' + 
-       '<li>City: ' + city + '</li>' + 
-       '</ul>';
-      
-function hello() {
-    return 'hello';
+const person = {
+  firstName: 'Steve',
+  lastName: 'Smith',
+  age: 30,
+  email: 'steve@aol.com',
+  hobbies: ['music', 'sports'],
+  address: {
+    city: 'Miami',
+    state: 'FL'
+  },
+  getBirthYear: function() {
+    return 2020 - this.age;
+  }
 }
 
-// With template strings (es6)
-html = `<ul>
-          <li>Name: ${name}</li>
-          <li>Age: ${age}</li>
-          <li>Job: ${job}</li>
-          <li>City: ${city}</li>
-          <li>${2 + 2}</li>
-          <li>${hello()}</li>
-          <li>${age > 30 ? 'Over 30' : 'Under 30'}</li>
-        </ul>`;
 
-document.body.innerHTML = html;
+val = person;
 
+// Get specific value
+val = person.firstName;
+val = person['lastName'];
+val = person.age;
+val = person.hobbies[0];
+val = person.address.state;
+val = person.address['city'];
+val = person.getBirthYear();
 
+console.log(val);
+
+const people = [
+  {name: 'John', age: 30},
+  {name: 'Mike', age: 23},
+  {name: 'Nancy', age: 40}
+];
+
+for(let i=0; i < people.length; i++) {
+  console.log(people[i].name);
+}
