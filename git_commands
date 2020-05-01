@@ -18,3 +18,10 @@ git branch -m <old name> <new name>     - When in another branch
 git branch -m <new name>                - When in a current branch
 
 git branch -d branch_name               - Delete a branch in a local repo 
+
+
+GITHUB
+
+git remote add origin https://github.com/hongoke999/modern-javascript-bt.git    -   label a githubrepo
+git push -u origin master               -   Pushing one branch from local repo to github repo
+git push -u origin --all                -   Pushing all branches from local repo to github repo
