@@ -1,21 +1,46 @@
-console.log("Hello, World!");
-console.log(123);
-console.log(true);
-var greeting = 'Hello!';
-console.log(greeting);
-console.log([1,2,3,4]);
-console.log({a:1, b:2});
-console.table({a:1, b:2});
-console.error('This is some error!');
-console.warn('This is a warning!');
-console.time('Hello');
-    console.log('Hello, World!');
-    console.log('Hello, World!');
-    console.log('Hello, World!');
-    console.log('Hello, World!');
-    console.log('Hello, World!');
-    console.log("Hello, World!");
-    console.log('Hello, World!');
-    console.log("Hello, World!");
-    console.log('Hello, World!');
-console.timeEnd('Hello');
+const color = "blue";
+
+switch(color) {
+    case 'red':
+        console.log('Color is red');
+        break;
+    case 'blue':
+        console.log('Color is blue');
+        break;
+    default:
+        console.log('Color is not red or blue');
+        break;        
+}
+
+let day;
+
+switch (new Date().getDay()) {
+    case 0:
+        day = 'Sunday';
+        break;
+    case 1:
+        day = 'Monday';
+        break;
+    case 2:
+        day = 'Tuesday';
+        break;
+    case 3:
+        day = 'Wednesday';
+        break;
+    case 4:
+        day = 'Thursday';
+        break;
+    case 5:
+        day = 'Friday';
+        break;
+    case 6:
+        day = 'Saturday';
+        break;
+    case 7:
+        day = 'Sunday';
+        break;
+    default:
+        break;
+}
+
+console.log(`Today is ${day}`);
